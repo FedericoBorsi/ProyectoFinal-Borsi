@@ -6,3 +6,8 @@ from AppLogin.views import *
 
 def inicio(request):
     return render(request, "inicio.html")
+
+def acercademi(request):
+    return render(request, "acercademi.html")
+
+

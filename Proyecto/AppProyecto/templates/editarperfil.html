@@ -1,0 +1,25 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="mb-5">Editar perfil de {{ nombreusuario }}</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+    <form action="{% url 'editarPerfil' %}" method="POST"> {% csrf_token %}
+
+        <table>
+
+            {{ form.as_table }}
+
+        </table>
+
+        <input type="submit" value="Modificar cambios">
+
+    </form>
+
+{% endblock %}

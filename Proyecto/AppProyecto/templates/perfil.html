@@ -1,0 +1,37 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class = "mb-5"> Perfil del usuario </h1>
+
+{% endblock %}
+
+
+{% block contenido %}
+
+    {{ mensaje }}
+
+    <div style="text-align: center;">
+    <img src="{{ avatar }}" alt="">
+    </div>
+    
+    <div style="text-align: center;">
+        <li> {{ user.username }}</li>
+        <li> {{ user.firstname }}</li>
+        <li> {{ user.lastname }}</li>
+        <li> {{ user.email }}</li>
+        <li> {{ url }}</li>
+        <li> {{ descripcion }}</li>
+    </div>
+
+    <div style="text-align: center;">
+        <a class="btn btn-primary" href="{% url 'editarPerfil' %}">Editar usuario</a>
+        <a class="btn btn-primary" href="{% url 'agregaravatar' %}">Agregar avatar</a>
+        <a class="btn btn-primary" href="{% url 'agregarurl' %}">Agregar url</a>
+        <a class="btn btn-primary" href="{% url 'agregardescripcion' %}">Agregar descripcion</a>
+
+    </div>
+
+{% endblock %}

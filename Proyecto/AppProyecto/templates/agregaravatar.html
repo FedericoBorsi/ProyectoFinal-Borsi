@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class = "mb-5"> Agregar/Cambiar el avatar </h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+    {{ mensaje }}
+
+    <div style="text-align: center;">
+        <img src="{{ avatar }}" alt="">
+    </div>
+
+    <form action="{% url 'agregaravatar' %}"> {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <div>
+            <input type="submit" value="Agregar">
+        </div>
+    </form>
+            
+{% endblock %}
+
