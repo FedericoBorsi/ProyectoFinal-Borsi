@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+    Responder mensaje
+
+{% endblock %}
+
+{% block contenido %}
+
+<form action="{% url 'respondermsj' %}"> {% csrf_token %}
+    <table>
+
+        {{ form.as_table }}
+
+    </table>
+    
+    <div>
+
+        <input class="btn btn-primary" type="submit" value="Enviar">
+
+    </div>
+
+</form>
+
+{% endblock %}

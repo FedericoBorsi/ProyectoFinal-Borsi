@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Mensajeria
+
+{% endblock %}
+
+{% block contenido %}
+
+    {{ mensaje }}
+    <div style="text-align: center;">
+        <a class="btn btn-primary" href="{% url 'enviarmensaje' %}"> Mandar nuevo mensaje </a>
+        <a class="btn btn-primary" href="{% url 'casillamsj' %}"> Casilla de Mensajes </a>
+
+    </div>
+
+{% endblock %}

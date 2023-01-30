@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+    mensaje de {{ mensaje.usuario }}
+{% endblock %}
+
+{% block contenido %}
+
+    <div>
+
+        <h5> {{ mensaje.usuario }} </h5>
+    
+    </div>
+    <div>
+
+            {{ mensaje.mensaje }}
+
+    </div>
+    <div style="text-align: center;">
+        
+        <a class="btn btn-primary" href="{% url 'respondermsj' mensaje.id %}"> Responder mensaje</a>
+    
+    </div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    
+    Casillero de mensajes
+    
+{% endblock %}
+
+{% block contenido %}
+    {% for mensaje in mensajes %}
+        <li style="text-align: center; clear: both; list-style: none;"> 
+            Mensaje de {{mensaje.usuario}} - {{ mensaje.fecha }}
+            
+            <a class="btn btn-primary" href="{% url 'mostrarmsj' mensaje.id %}"> Leer mensaje</a>
+            
+        </li>
+
+    {% endfor %}
+   
+{% endblock %}

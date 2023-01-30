@@ -4,7 +4,7 @@
 
 {% block titulo %}
 
-    <h1 class="mb-5">Editar perfil de {{ nombreusuario }}</h1>
+    Enviar mensajes
 
 {% endblock %}
 
@@ -12,15 +12,18 @@
 
     {{ mensaje }}
 
-    <form action="{% url 'editarPerfil' %}" method="POST"> {% csrf_token %}
-
+    <form action="{% url 'enviarmensaje' %}"> {% csrf_token %}
         <table>
 
             {{ form.as_table }}
 
         </table>
 
-        <input type="submit" value="Modificar cambios">
+        <div>
+
+            <input class="btn btn-primary" type="submit" value="Enviar">
+
+        </div>
 
     </form>
 

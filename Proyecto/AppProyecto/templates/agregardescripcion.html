@@ -12,10 +12,6 @@
 
     {{ mensaje }}
 
-    <div style="text-align: center;">
-        <img src="{{ avatar }}" alt="">
-    </div>
-
     <form action="{% url 'agregardescripcion' %}"> {% csrf_token %}
         <table>
             {{ form.as_table }}

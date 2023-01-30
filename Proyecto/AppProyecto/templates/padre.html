@@ -27,9 +27,11 @@
                     
                     {% if user.is_authenticated %} 
                     <a class="navbar-brand" href="{% url 'perfil' %}">Perfil</a>         
+                    <a class="navbar-brand" href="{% url 'mensaje' %}">Mensaje</a>
                     <a class="navbar-brand" href="{% url 'acercademi' %}">Acerca de mi</a>
                     <a class="btn btn-danger" href="{% url 'logout' %}">Cerrar sesión</a>
                     {% else %}
+                    <a class="navbar-brand" href="{% url 'acercademi' %}">Acerca de mi</a>
                     <a class="navbar-brand" href="{% url 'register' %}">Registrate</a>
                     <a class="navbar-brand" href="{% url 'login' %}">Iniciar sesión</a>
                     {% endif %}
